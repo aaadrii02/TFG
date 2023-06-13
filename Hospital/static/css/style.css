@@ -1,0 +1,149 @@
+.icon{
+    transform: scale(2) !important;
+    margin-right: 4% !important;
+    margin-top: 3% !important;
+}
+.user{
+    margin-right: 8% !important;
+    margin-top: 3% !important;
+}
+.full-height {
+    min-height: 100vh !important; /* Establece una altura mínima del 100% del viewport */
+  }
+  
+.jumbotron {
+    background: rgba(204, 204, 204, 0.5) !important;
+}
+.fondoListas{
+    background-color: white !important;
+    background-size: cover;
+    min-height: 85.5vh !important;
+}
+
+.menu{
+    min-height: 85.5vh !important;
+}
+
+.login {
+    background-image: url('../img/felicidad-salud-familia.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-item{
+    width: 210px;
+}
+
+.nav-item:hover{
+    color: white !important;
+    background-color: rgb(54, 121, 246) !important;
+}
+.pedirCitaForm{
+    min-height: 85.5vh !important;
+
+}
+.nav-link:hover{
+    color: white !important;
+}
+
+.modificarFicha {
+    background-image: url('../img/composicion-cuaderno-estetoscopio.jpg')!important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    min-height: 85.5vh !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: #f5f5f5 !important;
+}
+
+
+.pedirCita{
+    background-image: url('../img/disposicion-elementos-medicos-planos.jpg')!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 85.5vh !important;
+}
+
+
+.pedirCita {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.altaMedico{
+    background-image: url('../img/doctor-tableta-manos.jpg')!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85.5vh;
+}
+.altaMedicoForm{
+    background-color: transparent;
+    border: none;
+    margin-bottom: 0%;
+    margin-top: 2% !important;
+}
+
+.pedirCitaForm{
+    background-color: transparent;
+    border: none;
+}
+
+.altaMedicoForm label{
+    color: #333;
+    font-weight: bold;
+}
+.altaMedicoForm input[type="submit"] {
+    background-color:cadetblue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.pedirCitaForm label {
+    color: #333;
+    font-weight: bold;
+}
+
+.pedirCitaForm input[type="submit"] {
+    background-color:cadetblue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.pideCita {
+    font-size: 35px;
+    margin-right: 8%;
+    font-family: fantasy;
+    float: right;
+}
+
+.iconCalendar {
+    float: right;
+    font-size: 24px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+
+
+

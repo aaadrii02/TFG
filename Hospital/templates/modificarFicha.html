@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%block container%}
+<div class="container-fluid ">
+    <div class="row ">
+        <!-- Menú lateral -->
+        <div class="col-sm-3 col-md-2 sidebar ml-0  border-secondary bg-light menu">
+            <ul class="nav nav-pills flex-column ">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'verPacientes'%}"><i class="fa fa-home"></i>Ver Pacientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'verCitas'%}"><i class="fa fa-user"></i>Ver Citas</a>
+                </li>
+            </ul>
+        </div>
+        <div class="modificarFicha col-sm-11 col-md-10">
+            <div class="pedirCitaForm jumbotron w-50">
+                <p class="pideCita">Observaciones</p>
+                <form method="POST" action="{% url 'modificarFicha' %}">
+                    {% csrf_token %}
+                    {{ form.observaciones.errors }}
+                    <textarea class="ms-4" name="{{ form.observaciones.name }}" rows="4" cols="50">{{ form.observaciones.value }}</textarea>
+                    <br>
+                    <input class="ms-4 mt-4" type="submit" value="Guardar">
+                  </form>
+                <p>{{ mensaje }}</p>
+            </div>
+        </div> 
+    </div>
+</div>
+{%endblock%}

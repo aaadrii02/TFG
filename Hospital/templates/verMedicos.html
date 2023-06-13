@@ -1,0 +1,52 @@
+{%extends 'base.html'%}
+{%block container%}
+<div class="container-fluid fondoListas">
+    <div class="row h-100">
+        <!-- Menú lateral -->
+        <div class="col-sm-3 col-md-2 sidebar  ml-0  border-secondary bg-light menu">
+            <ul class="nav nav-pills flex-column ">
+                <li class="nav-item">
+                    <a class="nav-link" href="altaMedico"><i class="fa fa-home"></i>Dar de alta medico</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="verMedicos"><i class="fa fa-user"></i>Gestionar personal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="altaPaciente"><i class="fa fa-home"></i>Dar de alta paciente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="verPacientesAdmin"><i class="fa fa-home"></i>Gestionar pacientes</a>
+                </li>
+            </ul>
+        </div>
+        
+          
+        
+        <!-- Contenido principal -->
+        <div class="col-sm-9 col-md-10 main">
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Dni</th>
+                        <th scope="col">Usuario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {%for f in lista%}
+                    <tr>
+                        <td>{{f.nombre}}</td>
+                        <td>{{f.dni}}</td>
+                        <td>{{f.especialidad}}</td>
+                        <td><button type="button" class="btn btn-danger"><a class="text-white" href="{% url 'borrarMedico' val=f.dni %}">Dar de baja</a> <i class="bi bi-x-lg"></i></button></td>
+                    </tr>
+                  {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
+
+

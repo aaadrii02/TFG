@@ -1,0 +1,23 @@
+
+{%extends 'base.html'%}
+{%block container%}
+<div class="container-fluid h-100">
+    <h1 class="offset-3 mt-5">LOGIN</h1>
+    <hr>
+    <div class="form jumbotron w-50 offset-3">
+        <form action="{% url 'login' %}" method="POST">
+            {%csrf_token%}
+            {%for field in form%}
+            <div class="form-group">
+                <label>{{field.label}}</label> {{field}}
+            </div>
+            {%endfor%}
+            <br>
+            <center>
+                <input type="submit" class="btn btn-primary btn-lg" value="Aceptar">
+            </center>
+            {{error}}
+        </form>
+    </div>
+</div>
+{%endblock%}

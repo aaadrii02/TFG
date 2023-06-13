@@ -1,0 +1,56 @@
+{%extends 'base.html'%}
+{%block container%}
+<div class="container-fluid fondoListas">
+    <div class="row">
+        <!-- Menú lateral -->
+        <div class="col-sm-3 col-md-2 sidebar ml-0  border-secondary bg-light menu">
+            <ul class="nav nav-pills flex-column ">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'pedirCita'%}"><i class="fa fa-home"></i>Pedir cita</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'gestionarCita'%}"><i class="fa fa-user"></i>Gestionar citas</a>
+                </li>
+            </ul>
+        </div>
+
+        
+        <!-- Contenido principal -->
+        <div class="col-sm-9 col-md-10 main">
+            <table class="table">
+                <tr>
+                    <th>NOMBRE</th>
+                    <td>{{u.nombre_paciente}}</td>
+                </tr>
+                <tr>
+                    <th>DNI</th>
+                    <td>{{u.dni_paciente}}</td>
+                </tr>
+                <tr>
+                    <th>FECHA DE NACIMIENTO</th>
+                    <td>{{u.fecha_nacimiento}}</td>
+                </tr>
+                <tr>
+                    <th>SEXO</th>
+                    <td>{{u.sexo}}</td>
+                </tr>
+                <tr>
+                    <th>PESO</th>
+                    <td>{{u.peso}}</td>
+                </tr>
+                <tr>
+                    <th>DIRECCION</th>
+                    <td>{{u.direccion}}</td>
+                </tr>
+                <tr>
+                    <th>TELEFONO</th>
+                    <td>{{u.telefono}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
+    
+

@@ -1,0 +1,66 @@
+
+{%extends 'base.html'%}
+{%block container%}
+<div class="container-fluid fondoListas">
+    <div class="row">
+        <!-- Menú lateral -->
+        <div class="col-sm-3 col-md-2 sidebar ml-0  border-secondary bg-light menu">
+            <ul class="nav nav-pills flex-column ">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'verPacientes' %}"><i class="fa fa-home"></i>Ver Pacientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-user"></i>Ver Citas</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Contenido principal -->
+        <div class="col-sm-9 col-md-10 main">
+            <h3 class="mt-3">FICHA MÉDICA</h3>
+            <table class="table">
+                <tbody>
+                    {% for i in o %}
+                    <table class="table">
+                        <tr>
+                            <th>NOMBRE</th>
+                            <td>{{i.nombre_paciente}}</td>
+                        </tr>
+                        <tr>
+                            <th>DNI</th>
+                            <td>{{i.dni_paciente}}</td>
+                        </tr>
+                        <tr>
+                            <th>FECHA DE NACIMIENTO</th>
+                            <td>{{i.fecha_nacimiento}}</td>
+                        </tr>
+                        <tr>
+                            <th>SEXO</th>
+                            <td>{{i.sexo}}</td>
+                        </tr>
+                        <tr>
+                            <th>PESO</th>
+                            <td>{{i.peso}}</td>
+                        </tr>
+                        <tr>
+                            <th>DIRECCION</th>
+                            <td>{{i.direccion}}</td>
+                        </tr>
+                        <tr>
+                            <th>TELEFONO</th>
+                            <td>{{i.telefono}}</td>
+                        </tr>
+                        <td><a href="{% url 'modificarFicha' %}">Modificar Ficha <img width="16" height="16" src="https://img.icons8.com/material/24/edit-file--v1.png" alt="edit-file--v1"/></a></td>
+                    </table>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>
+
+{%endblock%}
+
+
+

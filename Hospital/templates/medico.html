@@ -1,0 +1,47 @@
+
+{%extends 'base.html'%}
+{%block container%}
+<div class="fondoListas container-fluid">
+    <div class="row">
+        <!-- Menú lateral -->
+        <div class="d-flex flex-grow-1 col-sm-5 col-md-2 sidebar bg-light border-secondary menu">
+            <ul class="nav nav-pills flex-column ">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'verPacientes'%}"><i class="fa fa-home"></i>Ver Pacientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'verCitas'%}"><i class="fa fa-user"></i>Ver Citas</a>
+                </li>
+            </ul>
+        </div>
+       
+        
+        <!-- Contenido principal -->
+        <div class="col-sm-9 col-md-10 main ">
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <td>{{u.id}}</td>
+                </tr>
+                <tr>
+                    <th>NOMBRE</th>
+                    <td>{{u.nombre}}</td>
+                </tr>
+                <tr>
+                    <th>DNI</th>
+                    <td>{{u.dni}}</td>
+                </tr>
+                <tr>
+                    <th>USUARIO</th>
+                    <td>{{u.usuario}}</td>
+                </tr>
+                <tr>
+                    <th>ESPECIALIDAD</th>
+                    <td>{{u.especialidad}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

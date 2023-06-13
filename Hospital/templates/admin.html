@@ -1,0 +1,49 @@
+{%extends 'base.html'%}
+{%block container%}
+<div class="container-fluid fondoListas">
+    <div class="row">
+        <!-- Menú lateral -->
+        <div class="col-sm-3 col-md-2 sidebar ml-0  border-secondary bg-light menu">
+            <ul class="nav nav-pills flex-column ">
+                <li class="nav-item">
+                    <a class="nav-link" href="altaMedico"><i class="fa fa-home"></i>Dar de alta medico</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="verMedicos"><i class="fa fa-user"></i>Gestionar personal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="altaPaciente"><i class="fa fa-home"></i>Dar de alta paciente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="verPacientesAdmin"><i class="fa fa-home"></i>Gestionar pacientes</a>
+                </li>
+            </ul>
+        </div>
+
+       
+        
+        <!-- Contenido principal -->
+        <div class="col-sm-9 col-md-10 main">
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <td>{{u.id}}</td>
+                </tr>
+                <tr>
+                    <th>NOMBRE</th>
+                    <td>{{u.nombre}}</td>
+                </tr>
+                <tr>
+                    <th>DNI</th>
+                    <td>{{u.dni}}</td>
+                </tr>
+                <tr>
+                    <th>USUARIO</th>
+                    <td>{{u.usuario}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
